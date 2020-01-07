@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dalebao.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-01-07T13:45:22.634Z</updated>
+    <title>Damn Genuis&apos;s</title>
+    <updated>2020-01-07T13:59:07.902Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dalebao.github.io"/>
     <link rel="self" href="https://dalebao.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>知耻且怂！</subtitle>
     <logo>https://dalebao.github.io/images/avatar.png</logo>
     <icon>https://dalebao.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, Damn Genuis&apos;s</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://dalebao.github.io/post/hello-gridea</id>
