@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dalebao.github.io</id>
     <title>Damn Genuis&apos;s</title>
-    <updated>2020-01-07T15:41:02.180Z</updated>
+    <updated>2020-01-07T16:10:41.896Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dalebao.github.io"/>
     <link rel="self" href="https://dalebao.github.io/atom.xml"/>
@@ -400,38 +400,6 @@ go run main.go
         <link href="https://dalebao.github.io/post/yong-hu-zhong-xin-she-ji-ji-yi-ci-xu-qiu">
         </link>
         <updated>2019-05-09T06:02:51.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="需求分析">需求分析</h3>
-<ol>
-<li>实现多系统之间普通用户账号同步</li>
-<li>子系统可将功能模块化，移植不同的App中可以调用相同的服务</li>
-<li>系统之间切换</li>
-</ol>
-<h3 id="痛点">痛点</h3>
-<ol>
-<li>不同系统与其下属的app或者web之间的判断登录状态方式不同（例，api_token生成方式不同）</li>
-<li>调取服务时，需要知道请求方的用户信息</li>
-</ol>
-<h3 id="解决方案">解决方案</h3>
-<ol>
-<li>针对判断登录状态方式不同，用户中心不参与子系统与<code>app/web</code>之间的登录状态判断。</li>
-<li>针对系统之间对账号同步的需求。统一判断登录/注册入口，向子系统中分发账号信息。</li>
-<li>针对调取服务需知道请求方信息。请求之前统一向用户中心请求临时令牌，调取服务带上令牌，服务通过令牌向用户中心请求用户数据。</li>
-</ol>
-<h3 id="架构设计图">架构设计图</h3>
-<figure data-type="image" tabindex="1"><img src="http://111.231.85.55/img/user_center.jpg" alt="design" loading="lazy"></figure>
-<h4 id="参数说明">参数说明</h4>
-<ol>
-<li><code>login</code> 登录</li>
-<li><code>register</code> 注册</li>
-<li><code>api_tokenA/api_tokenB</code> 不同子系统之间的判断登录状态方式</li>
-<li><code>u_token</code> 登录之后 用户中心分发的令牌，分发令牌时可以带上用户等其他信息</li>
-<li><code>tmp_token</code> 用户中心分发的临时令牌，由子系统向用户中心使用u_token申请</li>
-<li><code>result</code> 返回结果</li>
-</ol>
-<h4 id="流程说明">流程说明</h4>
-<p>包括登录、注册、请求服务流程</p>
-<hr>
-]]></summary>
         <content type="html"><![CDATA[<h3 id="需求分析">需求分析</h3>
 <ol>
 <li>实现多系统之间普通用户账号同步</li>
@@ -463,7 +431,6 @@ go run main.go
 <h4 id="流程说明">流程说明</h4>
 <p>包括登录、注册、请求服务流程</p>
 <hr>
-<!-- more -->
 <p><strong>登录</strong></p>
 <ul>
 <li>
