@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dalebao.github.io</id>
     <title>Damn Genuis&apos;s</title>
-    <updated>2020-01-07T13:59:07.902Z</updated>
+    <updated>2020-01-07T14:05:20.040Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dalebao.github.io"/>
     <link rel="self" href="https://dalebao.github.io/atom.xml"/>
@@ -11,35 +11,126 @@
     <icon>https://dalebao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Damn Genuis&apos;s</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://dalebao.github.io/post/hello-gridea</id>
-        <link href="https://dalebao.github.io/post/hello-gridea">
+        <title type="html"><![CDATA[用户中心设计-记一次需求]]></title>
+        <id>https://dalebao.github.io/post/yong-hu-zhong-xin-she-ji-ji-yi-ci-xu-qiu</id>
+        <link href="https://dalebao.github.io/post/yong-hu-zhong-xin-she-ji-ji-yi-ci-xu-qiu">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <updated>2019-05-09T06:02:51.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="需求分析">需求分析</h3>
+<ol>
+<li>实现多系统之间普通用户账号同步</li>
+<li>子系统可将功能模块化，移植不同的App中可以调用相同的服务</li>
+<li>系统之间切换</li>
+</ol>
+<h3 id="痛点">痛点</h3>
+<ol>
+<li>不同系统与其下属的app或者web之间的判断登录状态方式不同（例，api_token生成方式不同）</li>
+<li>调取服务时，需要知道请求方的用户信息</li>
+</ol>
+<h3 id="解决方案">解决方案</h3>
+<ol>
+<li>针对判断登录状态方式不同，用户中心不参与子系统与<code>app/web</code>之间的登录状态判断。</li>
+<li>针对系统之间对账号同步的需求。统一判断登录/注册入口，向子系统中分发账号信息。</li>
+<li>针对调取服务需知道请求方信息。请求之前统一向用户中心请求临时令牌，调取服务带上令牌，服务通过令牌向用户中心请求用户数据。</li>
+</ol>
+<h3 id="架构设计图">架构设计图</h3>
+<figure data-type="image" tabindex="1"><img src="http://111.231.85.55/img/user_center.jpg" alt="design" loading="lazy"></figure>
+<h4 id="参数说明">参数说明</h4>
+<ol>
+<li><code>login</code> 登录</li>
+<li><code>register</code> 注册</li>
+<li><code>api_tokenA/api_tokenB</code> 不同子系统之间的判断登录状态方式</li>
+<li><code>u_token</code> 登录之后 用户中心分发的令牌，分发令牌时可以带上用户等其他信息</li>
+<li><code>tmp_token</code> 用户中心分发的临时令牌，由子系统向用户中心使用u_token申请</li>
+<li><code>result</code> 返回结果</li>
+</ol>
+<h4 id="流程说明">流程说明</h4>
+<p>包括登录、注册、请求服务流程</p>
+<hr>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<h3 id="需求分析">需求分析</h3>
+<ol>
+<li>实现多系统之间普通用户账号同步</li>
+<li>子系统可将功能模块化，移植不同的App中可以调用相同的服务</li>
+<li>系统之间切换</li>
+</ol>
+<h3 id="痛点">痛点</h3>
+<ol>
+<li>不同系统与其下属的app或者web之间的判断登录状态方式不同（例，api_token生成方式不同）</li>
+<li>调取服务时，需要知道请求方的用户信息</li>
+</ol>
+<h3 id="解决方案">解决方案</h3>
+<ol>
+<li>针对判断登录状态方式不同，用户中心不参与子系统与<code>app/web</code>之间的登录状态判断。</li>
+<li>针对系统之间对账号同步的需求。统一判断登录/注册入口，向子系统中分发账号信息。</li>
+<li>针对调取服务需知道请求方信息。请求之前统一向用户中心请求临时令牌，调取服务带上令牌，服务通过令牌向用户中心请求用户数据。</li>
+</ol>
+<h3 id="架构设计图">架构设计图</h3>
+<figure data-type="image" tabindex="1"><img src="http://111.231.85.55/img/user_center.jpg" alt="design" loading="lazy"></figure>
+<h4 id="参数说明">参数说明</h4>
+<ol>
+<li><code>login</code> 登录</li>
+<li><code>register</code> 注册</li>
+<li><code>api_tokenA/api_tokenB</code> 不同子系统之间的判断登录状态方式</li>
+<li><code>u_token</code> 登录之后 用户中心分发的令牌，分发令牌时可以带上用户等其他信息</li>
+<li><code>tmp_token</code> 用户中心分发的临时令牌，由子系统向用户中心使用u_token申请</li>
+<li><code>result</code> 返回结果</li>
+</ol>
+<h4 id="流程说明">流程说明</h4>
+<p>包括登录、注册、请求服务流程</p>
+<hr>
 <!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<p><strong>登录</strong></p>
+<ul>
+<li>
+<ol>
+<li>登录</li>
+</ol>
+<ul>
+<li>1.1 <code>App_A</code> 发起登录请求</li>
+<li>1.2 <code>子系统A</code> 向 <code>用户中心</code> 发起登录请求</li>
+<li>1.3 <code>用户中心</code> 对登录进行判断，返回<code>用户信息</code>和对应 <code>u_token</code></li>
+<li>1.4 <code>子系统A</code> 保存 <code>u_token</code>，该用户登录，生成<code>api_tokenA</code>返回<code>App_A</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>子系统调用服务</strong></p>
+<ul>
+<li>
+<ol start="2">
+<li>子系统调用服务</li>
+</ol>
+<ul>
+<li>2.1 <code>WEB-B</code>发起调用请求，判断是否存在<code>tmp_token</code>。若不存在向<code>子系统B</code>请求<code>tmp_token</code></li>
+<li>2.2 <code>子系统B</code> 通过 <code>api_tokenB</code> 查询到对应用户的<code>u_token</code>，并且向<code>用户中心</code>请求<code>tmp_token</code></li>
+<li>2.3 <code>用户中心</code>解析<code>u_token</code>，返回对应的<code>tmp_token</code>,并对其设置过期时间</li>
+<li>2.4 <code>系统B</code> 将 <code>tmp_token</code> 返回给<code>WEB-B</code></li>
+<li>2.5 <code>WEB-B</code> 携带 <code>tmp_token</code> 请求 <code>ServiceA</code></li>
+<li>2.6 <code>ServiceA</code> 使用 <code>tmp_token</code> 请求 <code>用户中心</code>，判断其合法性</li>
+<li>2.7 <code>用户中心</code> 解析 <code>tmp_token</code> 返回对应的 <code>u_token</code> 与用户信息</li>
+<li>2.8 <code>ServiceA</code> 获得用户信息，处理请求，返回结果给 <code>WEB-B</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>注册</strong></p>
+<blockquote>
+<p>隐藏了<code>APP/WEB</code>对<code>子系统C</code>的请求，与登录相似</p>
+</blockquote>
+<ul>
+<li>
+<ol start="3">
+<li>register</li>
+</ol>
+<ul>
+<li>3.1 向 <code>用户中心</code> 发起注册请求</li>
+<li>3.2 <code>用户中心</code> 新建用户返回对应 <code>u_token</code> 与用户数据</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>每个子系统都应该保存一份用户数据，为了避免不同系统之间的数据混乱，在<code>用户中心</code>中生成唯一<code>uuid</code>，<code>子系统</code> 与 <code>用户中心</code> 之间对账号的对应使用<code>uuid</code></p>
 ]]></content>
     </entry>
 </feed>
