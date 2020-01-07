@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+<title>
+    Damn Genuis&#39;s
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://dalebao.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://dalebao.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://dalebao.github.io/styles/main.css" />
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://dalebao.github.io/media/script/tocbot.min.js"></script>
+<script src="https://dalebao.github.io/media/script/script.min.js"></script>
+<script src="https://dalebao.github.io/media/script/icon.min.js"></script>
+<link rel="stylesheet" href="https://dalebao.github.io/media/live2d/css/live2d.css" />
+<script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+<link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+<script>
+    (function() {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://dalebao.github.io">
+                    Damn Genuis&#39;s
+                </a>
+            </div>
+            <div class="menu navbar-right">
+                
+                <a class="menu-item" href="/">
+                    首页
+                </a>
+                
+                <a class="menu-item" href="/archives">
+                    归档
+                </a>
+                
+                <a class="menu-item" href="/tags">
+                    标签
+                </a>
+                
+                <a class="menu-item" href="/post/about">
+                    关于
+                </a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="https://dalebao.github.io">
+                        Damn Genuis&#39;s
+                    </a>
+                    <!--en-->
+                    <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                    <!--zh-->
+                    <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                </div>
+                <!--en-->
+                <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                <!--zh-->
+                <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; è�œå�•</div>
+
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                <a class="menu-item" href="/">
+                    首页
+                </a>
+                
+                <a class="menu-item" href="/archives">
+                    归档
+                </a>
+                
+                <a class="menu-item" href="/tags">
+                    标签
+                </a>
+                
+                <a class="menu-item" href="/post/about">
+                    关于
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+        <div class="main">
+            <div class="container">
+                <article class="post-wrap">
+                    <header class="post-header">
+                        <h1 class="post-title">
+                            浅谈 rpc 与 grpc
+                        </h1>
+                        <!--en-->
+                        <div class="post-meta en">
+                            Author:
+                            <a itemprop="author" rel="author" href="/">
+                                Damn Genuis's
+                            </a>
+                            <span class="post-time">
+                                Date: <a href="#">2019-11-02</a>
+                            </span>
+                            
+                            <span class="post-category">
+                                Category:
+                                
+                                <a href="https://dalebao.github.io/tag/golang">golang</a>
+                                
+                                <a href="https://dalebao.github.io/tag/rpc">rpc</a>
+                                
+                                <a href="https://dalebao.github.io/tag/grpc">grpc</a>
+                                
+                                <a href="https://dalebao.github.io/tag/xie-yi">协议</a>
+                                
+                            </span>
+                            
+                        </div>
+                        <!--zh-->
+                        <div class="post-meta zh">
+                            &#x4F5C;&#x8005;:
+                            <a itemprop="author" rel="author" href="/">
+                                Damn Genuis's
+                            </a>
+                            <span class="post-time">
+                                &#x65E5;&#x671F;: <a href="#">2019-11-02</a>
+                            </span>
+                            
+                            <span class="post-category">
+                                &#x5206;&#x7C7B;:
+                                
+                                <a href="https://dalebao.github.io/tag/golang">golang</a>
+                                
+                                <a href="https://dalebao.github.io/tag/rpc">rpc</a>
+                                
+                                <a href="https://dalebao.github.io/tag/grpc">grpc</a>
+                                
+                                <a href="https://dalebao.github.io/tag/xie-yi">协议</a>
+                                
+                            </span>
+                            
+                        </div>
+                    </header>
+                    <div class="post-content">
+                        <h2 id="什么是-rpc">什么是 RPC</h2>
+<blockquote>
+<p>在<a href="https://zh.wikipedia.org/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97">分布式计算</a><strong>，远程过程调用</strong>（英语：Remote Procedure Call，缩写为 RPC）是一个计算机通信<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E7%B5%A1%E5%82%B3%E8%BC%B8%E5%8D%94%E8%AD%B0">协议</a>。该协议允许运行于一台计算机的<a href="https://zh.wikipedia.org/wiki/%E7%A8%8B%E5%BA%8F">程序</a>调用另一个<a href="https://zh.wikipedia.org/wiki/%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4">地址空间</a>（通常为一个开放网络的一台计算机）的<a href="https://zh.wikipedia.org/wiki/%E5%AD%90%E7%A8%8B%E5%BA%8F">子程序</a>，而程序员就像调用本地程序一样，无需额外地为这个交互作用编程（无需关注细节）。RPC是一种服务器-客户端（Client/Server）模式，经典实现是一个通过<strong>发送请求-接受回应</strong>进行信息交互的系统。</p>
+</blockquote>
+<blockquote>
+<p>如果涉及的软件采用<a href="https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B">面向对象编程</a>，那么远程过程调用亦可称作<strong>远程调用</strong>或<strong>远程方法调用</strong>，例：<a href="https://zh.wikipedia.org/wiki/Java_RMI">Java RMI</a>。</p>
+</blockquote>
+<blockquote>
+<p>PRC是一种<a href="https://zh.wikipedia.org/wiki/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1">进程间通信</a>的模式，程序分布在不同的<a href="https://zh.wikipedia.org/wiki/%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4">地址空间</a>里。如果在同一主机里，PRC可以通过不同的虚拟地址空间（即便使用相同的物理地址）进行通讯，而在不同的主机间，则通过不同的物理进行交互。许多技术（常常是不兼容）都是基于这种概念而实现的。</p>
+<p>​																																			------- from wikipedia</p>
+</blockquote>
+<p>简单来说，<code>rpc</code> 就是在本地像调用本地函数一样调用远程服务上的函数，举个栗子（grpc举例）：</p>
+<p>远程 <code>server</code> 上定义函数</p>
+<pre><code class="language-go">package main
+
+import (
+	&quot;context&quot;
+	pb &quot;github.com/dalebao/grpc_demo/proto&quot;
+	&quot;google.golang.org/grpc&quot;
+	&quot;log&quot;
+	&quot;net&quot;
+)
+
+type SearchService struct {
+}
+
+//定义Search函数
+func (s *SearchService) Search(ctx context.Context, r *pb.SearchRequest) (*pb.SearchResponse, error) {
+	return &amp;pb.SearchResponse{Response: r.GetRequest() + &quot; Server&quot;}, nil
+}
+
+
+const PORT = &quot;9001&quot;
+
+func main() {
+	server := grpc.NewServer()
+  //注册
+	pb.RegisterSearchServiceServer(server, &amp;SearchService{})
+
+	lis, err := net.Listen(&quot;tcp&quot;, &quot;:&quot;+PORT)
+	if err != nil {
+		log.Fatalf(&quot;net.Listen err: %v&quot;, err)
+	}
+
+	server.Serve(lis)
+}
+</code></pre>
+<p><code>client</code> 端调用：</p>
+<pre><code class="language-go">package main
+
+import (
+	&quot;context&quot;
+	&quot;log&quot;
+
+	&quot;google.golang.org/grpc&quot;
+	//定义的grpc protocol
+	pb &quot;github.com/dalebao/grpc_demo/proto&quot;
+)
+
+const PORT = &quot;9001&quot;
+
+func main() {
+	conn, err := grpc.Dial(&quot;:&quot;+PORT, grpc.WithInsecure())
+	if err != nil {
+		log.Fatalf(&quot;grpc.Dial err: %v&quot;, err)
+	}
+	defer conn.Close()
+
+	client := pb.NewSearchServiceClient(conn)
+  //调用远程Search函数
+	resp, err := client.Search(context.Background(), &amp;pb.SearchRequest{
+		Request: &quot;gRPC1&quot;,
+	})
+	if err != nil {
+		log.Fatalf(&quot;client.Search err: %v&quot;, err)
+	}
+
+	log.Printf(&quot;resp: %s&quot;, resp.GetResponse())
+}
+</code></pre>
+<p>简单感受一下 <code>grpc</code> 的调用过程。</p>
+<h2 id="rpc-与-http">RPC 与 HTTP</h2>
+<ol>
+<li>
+<p>传输协议</p>
+<ul>
+<li><code>rpc</code> : 可以基于 <code>tcp</code> 也可以基于 <code>http</code></li>
+<li><code>http</code>: 基于 <code>http</code> 协议</li>
+</ul>
+</li>
+<li>
+<p>传输效率</p>
+<ul>
+<li><code>rpc</code> : 可以使用自定义的 <code>tcp</code> 协议，也可以使用 <code>http2</code> 协议，减小报文的体积。</li>
+<li><code>http</code>：基于 <code>http 1.1</code>，请求中会包含很多无用信息，使用 <code>http2</code> 协议，可以当成是一种 <code>rpc</code></li>
+</ul>
+</li>
+<li>
+<p>性能消耗</p>
+<ul>
+<li><code>rpc</code>：可以基于<code>thrift</code>实现高效的二进制传输</li>
+<li><code>http</code>: 大部分是通过<code>json</code>来实现的，字节大小和序列化耗时都比<code>thrift</code> 要更消耗性能</li>
+</ul>
+</li>
+<li>
+<p>负载均衡</p>
+<ul>
+<li><code>rpc</code>: 基本自带</li>
+<li><code>http</code>: 需要<code>nginx</code>等工具实现</li>
+</ul>
+</li>
+<li>
+<p>服务治理</p>
+<ul>
+<li><code>rpc</code>: 能做到自动通知，不影响上游</li>
+<li><code>http</code>: 需要事先通知，修改<code>nginx</code> 配置</li>
+</ul>
+</li>
+</ol>
+<p>总结： <code>rpc</code> 主要用于系统内部的相互调用，拥有传输效率高，性能高等优点。<code>http</code> 协议用于对外的<code>api</code> 构建。</p>
+<h2 id="rpc-与-http-api-调用的流程区别">RPC 与 HTTP Api 调用的流程区别</h2>
+<p>在定义好之后 client 与 server 之间的沟通方式（如json）之后，使用 rpc  与 普通 http api 在调用方的处理逻辑有比较大区别。 rpc 可以更好的关注业务逻辑。</p>
+<p>例如，在不考虑请求失败的情况下，使用 http api 沟通的 client 拿到服务器返回的数据需要进行以下操作：</p>
+<pre><code class="language-flow">st=&gt;start: 获取返回json数据
+e=&gt;end: 获取正确，开始业务逻辑处理
+op1=&gt;operation: 解析json串
+op1_c=&gt;condition: 解析是否正确
+op2_c=&gt;condition: 数据是否正确
+sub1=&gt;subroutine: My Subroutine
+para=&gt;parallel: 抛出异常
+
+st-&gt;op1-&gt;op1_c
+op1_c(yes)-&gt;op2_c
+op1_c(no)-&gt;para
+op2_c(yes)-&gt;e
+op2_c(no)-&gt;para
+
+</code></pre>
+<p>也就是说，在获取 server 返回的数据之后，我们需要判断数据是否是预先定义的沟通方式。在判断数据不同的时候，需要对不同的 api 做很多适配。</p>
+<p>同样在请求 server 的过程中，也需要按照 http 协议的模式，填写 header 等，而且存在不同请求方式的区别，在代码中体现很多业务不相关的细节。</p>
+<p>但是，rpc 的调用不放不需要在代码中考虑这些细节。我们会预先设计好 server 与 client 沟通的数据结构，在调用的过程中，client只要传输给server预定好的数据结构，那么也将会获得对应的数据。</p>
+<h2 id="grpc">GRPC</h2>
+<p><code>gRpc</code> 是谷歌开源的一个通用 <code>rpc</code> 框架，具有以下特性：</p>
+<ul>
+<li>
+<p>强大的<code>IDL</code>，使用<code>Protocol Buffers</code>作为数据交换的格式，支持<code>v2</code>、<code>v3</code>（推荐<code>v3</code>）</p>
+</li>
+<li>
+<p>跨语言、跨平台，也就是<code>gRpc</code>支持多种平台和语言</p>
+</li>
+<li>
+<p>支持 <strong>HTTP2</strong> ，双向传输、多路复用、认证等</p>
+</li>
+</ul>
+<blockquote>
+<p>IDL通过一种中立的方式来描述接口，使得在不同平台上运行的对象和用不同语言编写的程序可以相互通信交流；比如，一个组件用<a href="https://zh.wikipedia.org/wiki/C%2B%2B">C++</a>写成，另一个组件用<a href="https://zh.wikipedia.org/wiki/Java">Java</a>写成。</p>
+</blockquote>
+<p>简单来讲 gRPC 是一个 基于 HTTP/2 协议设计的 RPC 框架，它采用了 Protobuf 作为 IDL</p>
+<h3 id="安装grpc">安装gRpc</h3>
+<pre><code class="language-shell">$ go get -u google.golang.org/grpc
+</code></pre>
+<h3 id="常见的-rpc-框架对比">常见的 RPC 框架对比</h3>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th style="text-align:center">跨语言</th>
+<th style="text-align:center">多 IDL</th>
+<th style="text-align:center">服务治理</th>
+<th style="text-align:center">注册中心</th>
+<th style="text-align:center">服务管理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gRpc</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+</tr>
+<tr>
+<td>Thrift</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+</tr>
+<tr>
+<td>Rpcx</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td>Dubbo</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+</tbody>
+</table>
+<h3 id="protobuf">Protobuf</h3>
+<p>Protocol Buffers 是一种与语言、平台无关，可扩展的序列化结构化数据的方法，常用于通信协议，数据存储等等。相较于 JSON、XML，它更小、更快、更简单，因此也更受开发人员的青眯。</p>
+<p>语法如下:</p>
+<p>search.proto</p>
+<pre><code class="language-proto3">syntax = &quot;proto3&quot;;
+
+package proto;
+//定义服务结构体
+service SearchService {
+    rpc Search(SearchRequest) returns (SearchResponse) {}
+}
+
+//定义请求结构体
+message SearchRequest {
+    string request = 1;
+}
+
+//定义响应结构体
+message SearchResponse {
+    string response = 1;
+}
+</code></pre>
+<p>Protobuf 编译器会根据选择的语言不同，生成相应语言的 Service Interface Code 和 Stubs。</p>
+<p><a href="https://developers.google.com/protocol-buffers/docs/proto3">详细的语法</a></p>
+<h4 id="protocol-buffers-v3-安装">Protocol Buffers v3 安装</h4>
+<pre><code class="language-shell">wget https://github.com/google/protobuf/releases/download/v3.5.1/protobuf-all-3.5.1.zip
+unzip protobuf-all-3.5.1.zip
+cd protobuf-3.5.1/
+./configure
+make
+make install
+</code></pre>
+<h4 id="protocol-plugin">Protocol plugin</h4>
+<pre><code class="language-shell">go get -u github.com/golang/protobuf/protoc-gen-go
+</code></pre>
+<h4 id="编译成go语言">编译成go语言</h4>
+<p>在<code>search.proto</code>文件目录下执行：</p>
+<pre><code class="language-shell">protoc --go_out=plugins=grpc:. *.proto
+</code></pre>
+<ul>
+<li>涉及到<code>rpc</code>服务，在<code>plugins</code> 后面指定<code>grpc</code></li>
+</ul>
+<p>会得到一个<code>*.pb.go</code> 文件，内容为一个符合<code>grpc</code> 规范的 <code>go</code> 代码。</p>
+<h3 id="grpc调用过程概览">gRpc调用过程概览</h3>
+<figure data-type="image" tabindex="1"><img src="http://111.231.85.55/img/guocheng.png" alt="" loading="lazy"></figure>
+<ol>
+<li>客户端（gRPC Sub）调用 A 方法，发起 RPC 调用</li>
+<li>对请求信息使用 Protobuf 进行对象序列化压缩（IDL）</li>
+<li>服务端（gRPC Server）接收到请求后，解码请求体，进行业务逻辑处理并返回</li>
+<li>对响应结果使用 Protobuf 进行对象序列化压缩（IDL）</li>
+<li>客户端接受到服务端响应，解码请求体。回调被调用的 A 方法，唤醒正在等待响应（阻塞）的客户端调用并返回响应结果</li>
+</ol>
+<h3 id="grpc-流的三种类型">gRPC 流的三种类型</h3>
+<ul>
+<li>
+<p>Server-side streaming RPC：服务器端流式 RPC</p>
+</li>
+<li>
+<p>Client-side streaming RPC：客户端流式 RPC</p>
+</li>
+<li>
+<p>Bidirectional streaming RPC：双向流式 RPC</p>
+</li>
+</ul>
+<p>流的存在是为了解决大规模数据包与实时场景的需求。</p>
+<ol>
+<li>
+<p>服务端流式 RPC</p>
+<p>客户端发起一次 <code>rpc</code> 请求，服务端发送多次响应</p>
+</li>
+<li>
+<p>客户端流式 RPC</p>
+<p>客户端发起多次<code>rpc</code> 请求，服务端响应一次</p>
+</li>
+<li>
+<p>双向流式 RPC</p>
+<p>由客户端以流式的方式发起请求，服务端同样以流式的方式响应请求</p>
+<p>首个请求一定是 Client 发起，但具体交互方式（谁先谁后、一次发多少、响应多少、什么时候关闭）根据程序编写的方式来确定（可以结合协程）</p>
+</li>
+</ol>
+<p>实现看代码</p>
+<h2 id="安全">安全</h2>
+<ol>
+<li>
+<p>为了避免 grpc 请求过程中的数据裸奔在网络中，rpc可以使用 TLS 加密。</p>
+</li>
+<li>
+<p>如果希望该 grpc 服务，获得认证请求的能力，可以对服务做自定义的认证。</p>
+</li>
+</ol>
+<p>实现看代码</p>
+<h2 id="总结">总结</h2>
+<p>grpc 拥有 调用方便、传输速度快等优点。同时，由于 grpc 使用 http2.0 协议，意味着，我们可以对数据进行监听，分析协议，就可以实现让服务同时提供 http api 服务。</p>
+<p>grpc 的使用场景丰富，可以是普通的接口调用，也可以是大量数据的流传输。跨语言的特性，可以快速的让各种语言对接进服务中来。</p>
+<p>但，grpc 不适合用于对外的服务使用。比较适合在内部系统中的项目之间使用。</p>
+<h2 id="http-11-与-http2">http 1.1 与 http2</h2>
+<ul>
+<li><strong>新的二进制格式</strong>（Binary Format），HTTP1.x的解析是基于文本。基于文本协议的格式解析存在天然缺陷，文本的表现形式有多样性，要做到健壮性考虑的场景必然很多，二进制则不同，只认0和1的组合。基于这种考虑HTTP2.0的协议解析决定采用二进制格式，实现方便且健壮。</li>
+<li><strong>多路复用</strong>（MultiPlexing），即连接共享，即每一个request都是是用作连接共享机制的。一个request对应一个id，这样一个连接上可以有多个request，每个连接的request可以随机的混杂在一起，接收方可以根据request的 id将request再归属到各自不同的服务端请求里面。</li>
+<li><strong>header压缩</strong>，如上文中所言，对前面提到过HTTP1.x的header带有大量信息，而且每次都要重复发送，HTTP2.0使用encoder来减少需要传输的header大小，通讯双方各自cache一份header fields表，既避免了重复header的传输，又减小了需要传输的大小。</li>
+<li><strong>服务端推送</strong>（server push），同SPDY一样，HTTP2.0也具有server push功能。</li>
+</ul>
+<p><a href="https://juejin.im/entry/5981c5df518825359a2b9476">区别</a></p>
+
+                    </div>
+                    <section class="post-copyright en">
+                        <!--en-->
+                        <p class="copyright-item">
+                            <span>Author:</span>
+                            <span>Damn Genuis's</span>
+                        </p>
+
+                        <p class="copyright-item">
+                            <span>Permalink:</span>
+                            <span><a href="https://dalebao.github.io/post/qian-tan-rpc-yu-grpc">https://dalebao.github.io/post/qian-tan-rpc-yu-grpc</a></span>
+                        </p>
+
+                        <p class="copyright-item">
+                            <span>License:</span>
+                            <span>MIT License</span>
+                        </p>
+                    </section>
+                    <section class="post-copyright zh">
+                        <!--zh-->
+                        <p class="copyright-item ">
+                            <span>&#x4F5C;&#x8005;:</span>
+                            <span>Damn Genuis's</span>
+                        </p>
+
+                        <p class="copyright-item">
+                            <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                            <span><a href="https://dalebao.github.io/post/qian-tan-rpc-yu-grpc">https://dalebao.github.io/post/qian-tan-rpc-yu-grpc</a></span>
+                        </p>
+
+                        <p class="copyright-item">
+                            <span>&#x534F;&#x8BAE;:</span>
+                            <span>MIT License</span>
+                        </p>
+                    </section>
+                    <!--en-->
+                    <section class="post-tags en">
+                        <div>
+                            <span>Tag(s):</span>
+                            <span class="tag">
+                                
+                                
+                                <a href="https://dalebao.github.io/tag/golang"># golang</a>
+                                
+                                <a href="https://dalebao.github.io/tag/rpc"># rpc</a>
+                                
+                                <a href="https://dalebao.github.io/tag/grpc"># grpc</a>
+                                
+                                <a href="https://dalebao.github.io/tag/xie-yi"># 协议</a>
+                                
+                                
+                            </span>
+                        </div>
+                        <div>
+                            <a href="javascript:window.history.back();">back</a>
+                            <span>&dot;</span>
+                            <a href="#">home</a>
+                        </div>
+                    </section>
+                    <!--zh-->
+                    <section class="post-tags zh">
+                        <div>
+                            <span>&#x6807;&#x7B7E;:</span>
+                            <span class="tag">
+                                
+                                
+                                <a href="https://dalebao.github.io/tag/golang"># golang</a>
+                                
+                                <a href="https://dalebao.github.io/tag/rpc"># rpc</a>
+                                
+                                <a href="https://dalebao.github.io/tag/grpc"># grpc</a>
+                                
+                                <a href="https://dalebao.github.io/tag/xie-yi"># 协议</a>
+                                
+                                
+                            </span>
+                        </div>
+                        <div>
+                            <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                            <span>&dot;</span>
+                            <a href="#">&#x4E3B;&#x9875;</a>
+                        </div>
+                    </section>
+                    <section class="post-nav">
+                        
+                        
+                        <a class="next" rel="next" href="https://dalebao.github.io/post/shi-yong-golang-gou-jian-redis-cli">
+                            使用golang构建redis-cli
+                        </a>
+                        
+                    </section>
+                </article>
+            </div>
+            
+            
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '2818813a33ae562a560a',
+        clientSecret: 'd1d6aefddb78de832a3dc767e84cacb25349c281',
+        repo: 'dalebao.github.io',
+        owner: 'dalebao',
+        admin: ['dalebao'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+            
+            
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon" aria-hidden="true"><use xlink:href="#like"></use></svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div>
+                Powered by <a href="https://github.com/dalebao" target="_blank">Dale</a>
+                    <b id="hitokoto"></b><br>
+                    <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face"><path d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z" fill="#93b5cf"></path></svg>
+                    Damn Genuis&#39;s &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        | Powered by <a href="https://coding.net" target="_blank">Coding.net</a>
+            </div>
+            <div id="update" style="display:none;">
+                
+            </div>
+            
+        </footer>
+        
+                <script>
+                    hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    CheckVersion();
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+                </script>
+    </div>
+</body>
+
+</html>
