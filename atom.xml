@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dalebao.github.io</id>
     <title>Damn Genuis&apos;s</title>
-    <updated>2020-01-07T16:12:00.192Z</updated>
+    <updated>2020-01-08T14:24:07.907Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dalebao.github.io"/>
     <link rel="self" href="https://dalebao.github.io/atom.xml"/>
@@ -10,6 +10,47 @@
     <logo>https://dalebao.github.io/images/avatar.png</logo>
     <icon>https://dalebao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Damn Genuis&apos;s</rights>
+    <entry>
+        <title type="html"><![CDATA[who am I]]></title>
+        <id>https://dalebao.github.io/post/about</id>
+        <link href="https://dalebao.github.io/post/about">
+        </link>
+        <updated>2020-01-08T14:04:15.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>真-底层 后端程序员</strong></p>
+<h2 id="介绍">介绍</h2>
+<p>95年生人<br>
+2013年就读于：浙江工业大学<br>
+状态：单身狗<br>
+参数：185cm/77.8kg<br>
+熟悉：抽烟/喝酒/纹身<br>
+信念：不谈恋爱，X事没有<br>
+坐标：杭州<br>
+微信：dale15355404829</p>
+<h2 id="技术栈">技术栈</h2>
+<pre><code>1. PHP/Python/Golang/js
+2. MySQL/Redis/Postgres
+</code></pre>
+<h2 id="2020年目标">2020年目标</h2>
+<pre><code>1. 好好过日子
+2. 珍惜眼前人
+</code></pre>
+<h2 id="编程水平">编程水平</h2>
+<p>弱鸡阶层。<br>
+希望能够靠技术吃饭。<br>
+通过Google可以解决我目前所有问题。<br>
+文档与源码可以找到我想要的答案。<br>
+在往通信与高可用架构方向努力。</p>
+<h2 id="信仰">信仰</h2>
+<p>信仰技术可以改变生活。<br>
+信仰为人民服务才是未来。<br>
+信仰框架内的自由才是真正的自由。<br>
+信仰无知的人更加快乐。<br>
+信仰独立思考能力 &gt; 学习能力 &gt;&gt; 获取文凭能力。</p>
+<h2 id="注">注</h2>
+<p>无宗教信仰。<br>
+无政治派系。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[浅谈 rpc 与 grpc]]></title>
         <id>https://dalebao.github.io/post/qian-tan-rpc-yu-grpc</id>

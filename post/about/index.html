@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>获取每年所有周 | Damn Genuis&#39;s</title>
+<title>who am I | Damn Genuis&#39;s</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -24,14 +24,19 @@
 
 
 
-    <meta name="description" content="
-获取指定年第一周到最后一周的日期分布。当年则截取到当日所在周。用于时间分类数据统计。
-
-function get_week($year)
-{
-    $year_start = $year . &quot;-01-01&quot;;
-  ..." />
-    <meta name="keywords" content="算法,php" />
+    <meta name="description" content="真-底层 后端程序员
+介绍
+95年生人
+2013年就读于：浙江工业大学
+状态：单身狗
+参数：185cm/77.8kg
+熟悉：抽烟/喝酒/纹身
+信念：不谈恋爱，X事没有
+坐标：杭州
+微信：dale15355404829
+技术栈
+1. PHP/..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -102,70 +107,55 @@ function get_week($year)
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">获取每年所有周</h2>
-            <div class="post-date">2019-04-27</div>
-            
-              <div class="feature-container" style="background-image: url('http://111.231.85.55/img/c.jpg')">
-              </div>
+            <h2 class="post-title">who am I</h2>
+            <div class="post-date">2020-01-08</div>
             
             <div class="post-content" v-pre>
-              <blockquote>
-<p>获取指定年第一周到最后一周的日期分布。当年则截取到当日所在周。用于时间分类数据统计。</p>
-</blockquote>
-<pre><code class="language-php">function get_week($year)
-{
-    $year_start = $year . &quot;-01-01&quot;;
-    $year_end = $year . &quot;-12-31&quot;;
-    $startday = strtotime($year_start);
-    if (intval(date('N', $startday)) != '1') {
-        $startday = strtotime(&quot;next monday&quot;, strtotime($year_start)); //获取年第一周的日期
-    }
-    $year_mondy = date(&quot;Y-m-d&quot;, $startday); //获取年第一周的日期
- 
-    $endday = strtotime($year_end);
-    if (intval(date('W', $endday)) == '7') {
-        $endday = strtotime(&quot;last sunday&quot;, strtotime($year_end));
-    }
- 
-    //如果是当前年则统计到当前周
-    $now_year = date('Y');
-    if ($now_year == $year) {
-        $num = date('W', strtotime(date('Y-m-d')));
-    }  else {
-        $num = intval(date('W', $endday));
-        if ($num == '1'){
-            $num = intval(date('W',$endday -(7*24*3600)))+1;
-        }
-    }
-
-    for ($i = 1; $i &lt;= $num; $i++) {
-        $j = $i -1;
-        $start_date = date(&quot;Y-m-d&quot;, strtotime(&quot;$year_mondy $j week &quot;));
-        $end_day = date(&quot;Y-m-d&quot;, strtotime(&quot;$start_date +6 day&quot;));
-        if (!(date(&quot;Y&quot;,strtotime(&quot;$year_mondy $j week &quot;)) &gt; $year)){
-            $week_array[$i] = array(
-                substr(str_replace(&quot;-&quot;, &quot;.&quot;, $start_date), 5),
-                substr(str_replace(&quot;-&quot;, &quot;.&quot;, $end_day), 5));
-        }
-    }
-    return $week_array;
-}
+              <p><strong>真-底层 后端程序员</strong></p>
+<h2 id="介绍">介绍</h2>
+<p>95年生人<br>
+2013年就读于：浙江工业大学<br>
+状态：单身狗<br>
+参数：185cm/77.8kg<br>
+熟悉：抽烟/喝酒/纹身<br>
+信念：不谈恋爱，X事没有<br>
+坐标：杭州<br>
+微信：dale15355404829</p>
+<h2 id="技术栈">技术栈</h2>
+<pre><code>1. PHP/Python/Golang/js
+2. MySQL/Redis/Postgres
 </code></pre>
+<h2 id="2020年目标">2020年目标</h2>
+<pre><code>1. 好好过日子
+2. 珍惜眼前人
+</code></pre>
+<h2 id="编程水平">编程水平</h2>
+<p>弱鸡阶层。<br>
+希望能够靠技术吃饭。<br>
+通过Google可以解决我目前所有问题。<br>
+文档与源码可以找到我想要的答案。<br>
+在往通信与高可用架构方向努力。</p>
+<h2 id="信仰">信仰</h2>
+<p>信仰技术可以改变生活。<br>
+信仰为人民服务才是未来。<br>
+信仰框架内的自由才是真正的自由。<br>
+信仰无知的人更加快乐。<br>
+信仰独立思考能力 &gt; 学习能力 &gt;&gt; 获取文凭能力。</p>
+<h2 id="注">注</h2>
+<p>无宗教信仰。<br>
+无政治派系。</p>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://dalebao.github.io/tag/suan-fa" class="tag">
-                    算法
-                  </a>
-                
-                  <a href="https://dalebao.github.io/tag/best_language" class="tag">
-                    php
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://dalebao.github.io/post/qian-tan-rpc-yu-grpc">
+                  <h3 class="post-title">
+                    浅谈 rpc 与 grpc
+                  </h3>
+                </a>
+              </div>
             
 
             
